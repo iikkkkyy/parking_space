@@ -5,7 +5,7 @@ import 'package:parking_space/data/repository/parking_lot_info_repository.dart';
 
 import 'main_state.dart';
 
-class MainVieModel extends ChangeNotifier {
+class MainViewModel extends ChangeNotifier {
   final ParkingLotInfoRepository _repository;
 
   MainState _state = const MainState();
@@ -15,7 +15,7 @@ class MainVieModel extends ChangeNotifier {
   final _debounce = Debounce(const Duration(milliseconds: 500));
 
 
-  MainVieModel({
+  MainViewModel({
     required ParkingLotInfoRepository getParkingInfoRepository,
   }) : _repository = getParkingInfoRepository;
 

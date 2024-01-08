@@ -25,9 +25,9 @@ mixin _$ParkingLotInfo {
   @JsonKey(name: 'ADDR')
   String get parkingAddress => throw _privateConstructorUsedError;
   @JsonKey(name: 'CAPACITY')
-  String get totalCapacity => throw _privateConstructorUsedError;
+  double get totalCapacity => throw _privateConstructorUsedError;
   @JsonKey(name: 'CUR_PARKING')
-  String get remainSpace => throw _privateConstructorUsedError;
+  double get remainSpace => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -44,8 +44,8 @@ abstract class $ParkingLotInfoCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'PARKING_NAME') String parkingName,
       @JsonKey(name: 'ADDR') String parkingAddress,
-      @JsonKey(name: 'CAPACITY') String totalCapacity,
-      @JsonKey(name: 'CUR_PARKING') String remainSpace});
+      @JsonKey(name: 'CAPACITY') double totalCapacity,
+      @JsonKey(name: 'CUR_PARKING') double remainSpace});
 }
 
 /// @nodoc
@@ -78,11 +78,11 @@ class _$ParkingLotInfoCopyWithImpl<$Res, $Val extends ParkingLotInfo>
       totalCapacity: null == totalCapacity
           ? _value.totalCapacity
           : totalCapacity // ignore: cast_nullable_to_non_nullable
-              as String,
+              as double,
       remainSpace: null == remainSpace
           ? _value.remainSpace
           : remainSpace // ignore: cast_nullable_to_non_nullable
-              as String,
+              as double,
     ) as $Val);
   }
 }
@@ -98,8 +98,8 @@ abstract class _$$ParkingLotInfoImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'PARKING_NAME') String parkingName,
       @JsonKey(name: 'ADDR') String parkingAddress,
-      @JsonKey(name: 'CAPACITY') String totalCapacity,
-      @JsonKey(name: 'CUR_PARKING') String remainSpace});
+      @JsonKey(name: 'CAPACITY') double totalCapacity,
+      @JsonKey(name: 'CUR_PARKING') double remainSpace});
 }
 
 /// @nodoc
@@ -130,11 +130,11 @@ class __$$ParkingLotInfoImplCopyWithImpl<$Res>
       totalCapacity: null == totalCapacity
           ? _value.totalCapacity
           : totalCapacity // ignore: cast_nullable_to_non_nullable
-              as String,
+              as double,
       remainSpace: null == remainSpace
           ? _value.remainSpace
           : remainSpace // ignore: cast_nullable_to_non_nullable
-              as String,
+              as double,
     ));
   }
 }
@@ -161,10 +161,10 @@ class _$ParkingLotInfoImpl
   final String parkingAddress;
   @override
   @JsonKey(name: 'CAPACITY')
-  final String totalCapacity;
+  final double totalCapacity;
   @override
   @JsonKey(name: 'CUR_PARKING')
-  final String remainSpace;
+  final double remainSpace;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -221,8 +221,8 @@ abstract class _ParkingLotInfo implements ParkingLotInfo {
   const factory _ParkingLotInfo(
           {@JsonKey(name: 'PARKING_NAME') required final String parkingName,
           @JsonKey(name: 'ADDR') required final String parkingAddress,
-          @JsonKey(name: 'CAPACITY') required final String totalCapacity,
-          @JsonKey(name: 'CUR_PARKING') required final String remainSpace}) =
+          @JsonKey(name: 'CAPACITY') required final double totalCapacity,
+          @JsonKey(name: 'CUR_PARKING') required final double remainSpace}) =
       _$ParkingLotInfoImpl;
 
   factory _ParkingLotInfo.fromJson(Map<String, dynamic> json) =
@@ -236,10 +236,10 @@ abstract class _ParkingLotInfo implements ParkingLotInfo {
   String get parkingAddress;
   @override
   @JsonKey(name: 'CAPACITY')
-  String get totalCapacity;
+  double get totalCapacity;
   @override
   @JsonKey(name: 'CUR_PARKING')
-  String get remainSpace;
+  double get remainSpace;
   @override
   @JsonKey(ignore: true)
   _$$ParkingLotInfoImplCopyWith<_$ParkingLotInfoImpl> get copyWith =>

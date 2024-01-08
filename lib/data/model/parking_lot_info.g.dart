@@ -10,8 +10,8 @@ _$ParkingLotInfoImpl _$$ParkingLotInfoImplFromJson(Map<String, dynamic> json) =>
     _$ParkingLotInfoImpl(
       parkingName: json['PARKING_NAME'] as String,
       parkingAddress: json['ADDR'] as String,
-      totalCapacity: json['CAPACITY'] as String,
-      remainSpace: json['CUR_PARKING'] as String,
+      totalCapacity: (json['CAPACITY'] as num).toDouble(),
+      remainSpace: (json['CUR_PARKING'] as num).toDouble(),
     );
 
 Map<String, dynamic> _$$ParkingLotInfoImplToJson(
